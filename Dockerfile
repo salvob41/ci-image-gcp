@@ -16,4 +16,4 @@ RUN gcloud components install kubectl
 
 ADD https://github.com/zegl/kube-score/releases/download/v1.2.1/kube-score_1.2.1_linux_amd64.tar.gz /usr/local/bin/kube-score
 
-RUN chmod +x kube-score
+RUN chmod +x /usr/local/bin/kube-score
