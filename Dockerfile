@@ -1,7 +1,8 @@
 FROM google/cloud-sdk:252.0.0-alpine
 
 LABEL maintainer="Gabriele Diener <g.diener@me.com>" \
-    image="registry.jobtome.io/devops/docker-images/gcloud-sdk" \
+    image="gdiener/ci-image-gcp" \
+    repository="https://github.com/gadiener/ci-image-gcp" \
     vendor="jobtome" \
     description="Docker image with Google Cloud SDK and Kubectl used in CI runners." \
     license="MIT"
