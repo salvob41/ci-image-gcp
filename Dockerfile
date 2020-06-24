@@ -12,9 +12,11 @@ RUN apk update && \
         coreutils \
         jq \
         gettext
-RUN wget -q -O /usr/bin/yq $(wget -q -O - https://api.github.com/repos/mikefarah/yq/releases/latest | jq -r '.assets[] | select(.name == "yq_linux_amd64") | .browser_download_url') && chmod +x /usr/bin/yq
 
-RUN gcloud components install kubectl
+RUN wget -q -O /usr/bin/yq $(wget -q -O - https://api.github.com/repos/mikefarah/yq/releases/latest | jq -r '.assets[] | select(.name == "yq_linux_amd64") | .browser_download_url') && \
+    chmod +x /usr/bin/yq
+
+RUN gcloud components install --quiet kubectl beta
 
 ADD https://github.com/zegl/kube-score/releases/download/v1.2.1/kube-score_1.2.1_linux_amd64.tar.gz /usr/local/bin/kube-score
 
