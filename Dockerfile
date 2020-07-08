@@ -1,4 +1,4 @@
-FROM google/cloud-sdk:252.0.0-alpine
+FROM google/cloud-sdk:299.0.0-alpine
 
 LABEL maintainer="Gabriele Diener <g.diener@me.com>" \
     image="gdiener/ci-image-gcp" \
