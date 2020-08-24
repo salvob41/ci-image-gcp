@@ -12,4 +12,4 @@ It also includes [kube-score](https://github.com/zegl/kube-score) not built from
 
 To override these default versions:
 
-`docker build -t gadiener/ci-image-gcp --build-arg CLOUD_SDK_VERSION=v9000 --build-arg KUBE_SCORE_VERSION=v1000 .`
+`docker build -t gdiener/ci-image-gcp --build-arg CLOUD_SDK_VERSION=v9000 --build-arg KUBE_SCORE_VERSION=v1000 .`
