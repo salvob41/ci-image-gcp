@@ -4,7 +4,7 @@ FROM google/cloud-sdk:${CLOUD_SDK_VERSION}
 ARG KUBE_SCORE_VERSION=1.2.1
 ARG SOPS_VERSION=3.7.1
 
-LABEL maintainer="Gabriele Diener <g.diener@me.com>" \
+LABEL maintainer="Gabriele Diener <g.diener@me.com>, Fabrizio Bellicano <bellicaf@tcd.ie>" \
     image="gdiener/ci-image-gcp" \
     repository="https://github.com/gadiener/ci-image-gcp" \
     vendor="jobtome" \
