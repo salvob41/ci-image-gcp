@@ -2,4 +2,7 @@
 
 Docker image with Google Cloud SDK and Kubectl used in [CI runners](https://github.com/gadiener/ci-image-gcp).
 
-It also includes [kube-score](https://github.com/zegl/kube-score) not built from source.
+It also includes:
+
+ - [kube-score](https://github.com/zegl/kube-score) (v1.2.1) not built from source.
+ - [sops](https://github.com/mozilla/sops) (v3.7.1) not built from source.
