@@ -20,4 +20,7 @@ RUN gcloud components install --quiet kubectl beta
 
 ADD https://github.com/zegl/kube-score/releases/download/v1.2.1/kube-score_1.2.1_linux_amd64.tar.gz /usr/local/bin/kube-score
 
-RUN chmod +x /usr/local/bin/kube-score
+ADD https://github.com/mozilla/sops/releases/download/v3.7.1/sops-v3.7.1.linux /usr/local/bin/sops
+
+RUN chmod +x /usr/local/bin/kube-score && \
+    chmod +x /usr/local/bin/sops
