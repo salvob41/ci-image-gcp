@@ -1,4 +1,7 @@
-FROM google/cloud-sdk:299.0.0-alpine
+ARG CLOUD_SDK_VERSION=299.0.0-alpine
+FROM google/cloud-sdk:${CLOUD_SDK_VERSION}
+
+ARG KUBE_SCORE_VERSION=1.2.1
 
 LABEL maintainer="Gabriele Diener <g.diener@me.com>" \
     image="gdiener/ci-image-gcp" \
@@ -18,7 +21,7 @@ RUN wget -q -O /usr/bin/yq $(wget -q -O - https://api.github.com/repos/mikefarah
 
 RUN gcloud components install --quiet kubectl beta
 
-ADD https://github.com/zegl/kube-score/releases/download/v1.2.1/kube-score_1.2.1_linux_amd64.tar.gz /usr/local/bin/kube-score
+ADD https://github.com/zegl/kube-score/releases/download/v${KUBE_SCORE_VERSION}/kube-score_${KUBE_SCORE_VERSION}_linux_amd64.tar.gz /usr/local/bin/kube-score
 
 ADD https://github.com/mozilla/sops/releases/download/v3.7.1/sops-v3.7.1.linux /usr/local/bin/sops
 
