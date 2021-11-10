@@ -11,7 +11,7 @@ It also includes:
 ### Versions
 |||
 |-|-|
-| cloud sdk | 299.0.0-alpine |
+| cloud sdk | 364.0.0-alpine |
 | kube-score | 1.2.1 |
 | sops | 3.7.1 |
 
