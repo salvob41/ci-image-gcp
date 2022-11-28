@@ -1,12 +1,12 @@
-ARG CLOUD_SDK_VERSION=364.0.0-alpine
+ARG CLOUD_SDK_VERSION=410.0.0-alpine
 FROM google/cloud-sdk:${CLOUD_SDK_VERSION}
 
 ARG KUBE_SCORE_VERSION=1.2.1
 ARG SOPS_VERSION=3.7.1
 
-LABEL maintainer="Gabriele Diener <g.diener@me.com>, Fabrizio Bellicano <bellicaf@tcd.ie>" \
-    image="gdiener/ci-image-gcp" \
-    repository="https://github.com/gadiener/ci-image-gcp" \
+LABEL maintainer="SRE <sre@jobtome.com>" \
+    image="jobtome-labs/ci-image-gcp" \
+    repository="https://github.com/jobtome-labs/ci-image-gcp" \
     vendor="jobtome" \
     description="Docker image with Google Cloud SDK and Kubectl used in CI runners." \
     license="MIT"
